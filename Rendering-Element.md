@@ -11,9 +11,10 @@ const element = <h1>Hello, world</h1>;
 
 ## Element를 DOM에 렌더링하기
 ``` div ``` 가 HTML file 어딘가에 있다고 합시다. :
+
 ```
 <div id="root"></div>
-```
+ ```
 내부의 모든것이 리액트 DOM에 의해 관리되기 때문에, 이것을 "root" DOM node라고 부릅니다.
 
 리액트로 빌드된 어플리케이션은 보통 하나의 root DOM node를 가집니다. 만약 기존의 앱에 리액트를 통합한다면 원하는 만큼의 독립된 root DOM node들이 있을 수 있습니다.
