@@ -37,11 +37,11 @@ function ActionLink() {
  );
 }
 ```
-여기서 ``` e ```는 synthetic event입니다. 리액트는 이 synthetic event들을 <a href="https://www.w3.org/TR/DOM-Level-3-Events/"><code>W3C spec<code/></a>에 따라서 정의했기 때문에, 브라우저 호환성에 대해 걱정할 필요가 없습니다. 더 많은 정보는 <a href="/react/docs/events.html"><code>SyntheticEvent</code></a>레퍼런스 가이드를 참고하세요.  
+여기서 ``` e ```는 synthetic event입니다. 리액트는 이 synthetic event들을 <a href="https://www.w3.org/TR/DOM-Level-3-Events/">W3C spec</a>에 따라서 정의했기 때문에, 브라우저 호환성에 대해 걱정할 필요가 없습니다. 더 많은 정보는 <a href="/react/docs/events.html">``` SyntheticEvent ```</a>레퍼런스 가이드를 참고하세요.  
 
-보통 리액트를 사용하는 경우에는 이미 생성된 DOM에 event를 추가하기위해, <code>addEventListener<code/>를 호출할 필요가 없습니다. 대신에, element가 처음 렌더링될때, listener를 제공해주면 됩니다.
+보통 리액트를 사용하는 경우에는 이미 생성된 DOM에 event를 추가하기위해, ``` addEventListener ```를 호출할 필요가 없습니다. 대신에, element가 처음 렌더링될때, listener를 제공해주면 됩니다.
 
-<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes">ES6 class</a>를 사용해서 component를 정의할때, 흔한 패턴은 event handler를 class의 method로 두는것 입니다. 예를 들어, 이 <code>Toggle</code> component는 유저가 "ON"과 "USER"상태를 전활할 수 있게하는 버튼을 렌더링합니다.
+<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes">ES6 class</a>를 사용해서 component를 정의할때, 흔한 패턴은 event handler를 class의 method로 두는것 입니다. 예를 들어, 이 ``` Toggle ``` component는 유저가 "ON"과 "USER"상태를 전활할 수 있게하는 버튼을 렌더링합니다.
 ```
 class Toggle extends React.Component {
   constructor(props) {

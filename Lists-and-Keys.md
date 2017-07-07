@@ -14,7 +14,7 @@ console.log(doubled);
 ## 여러 Component 렌더링하기
 중괄호({})로 감싸면, element의 collection을 만들고 그것을 JSX에 포함시킬 수 있습니다.
 
-아래의 코드에서, ``` number ``` array를 JavaScript ``` map() ``` function를 이용해서, 순환했습니다. 각각의 item에서 ``` <li> ```element를 리턴합니다. 마지막으로, element array의 결과를, ``` listsItem ```에 할당합니다.
+아래의 코드에서, ``` number ``` array를 JavaScript ``` map() ``` function를 이용해서, 순환했습니다. 각각의 item에서 ``` <li> ``` element를 리턴합니다. 마지막으로, element array의 결과를, ``` listsItem ```에 할당합니다.
 ```
 const numbers = [1, 2, 3, 4, 5];
 const listItems = numbers.map((number) =>
@@ -109,7 +109,7 @@ const todoItems = todos.map((todo, index) =>
 ## Key로 component추출 하기
 Key는 array 주변(surrounding array)의 context에서만 의미가 있습니다.
 
-예를 들어, ``` ListItem ```을 추출한다면, ``` <li> ```root element가 아니라, array안의 ``` <ListItem /> ``` element에서 key를 가지고 있어야 합니다.
+예를 들어, ``` ListItem ```을 추출한다면, ``` <li> ``` root element가 아니라, array안의 ``` <ListItem /> ``` element에서 key를 가지고 있어야 합니다.
 
 ** 예제: 잘못된, key 사용 **
 ```
@@ -143,7 +143,7 @@ ReactDOM.render(
 );
 ```
 
-** 예제: 올바른, key 사용 **
+**예제: 올바른, key 사용**
 ```
 function ListItem(props) {
   // 딩동댕! 여기서는 key를 사용할 필요가 없습니다.:

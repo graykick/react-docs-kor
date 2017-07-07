@@ -264,13 +264,13 @@ ReactDOM.render(
 
 어떤일이 일어났고, method들이 호출된 순서를 빠르게 요약하겠습니다.
 
-1) ``` <Clock />이 ``` ReactDOM.render() ```에 주어지면, 리액트는 ``` Clock ```component의 constructor를 호출합니다. ``` Clock ```이 실시간으로 보여져야 하므로, 현재 시각을 포함한 object로 ``` this.state ```를 초기화 합니다. 추후, 이 state를 업데이트 할 것입니다.
+1) ``` <Clock /> ```이 ``` ReactDOM.render() ```에 주어지면, 리액트는 ``` Clock ``` component의 constructor를 호출합니다. ``` Clock ```이 실시간으로 보여져야 하므로, 현재 시각을 포함한 object로 ``` this.state ```를 초기화 합니다. 추후, 이 state를 업데이트 할 것입니다.
 
-2) 리액트는 다음으로, ``` Clock ```component의 ``` render() ``` mothod를 호출합니다. 이것이 리액트가 스크린에 무엇을 표시할지 아는 방법입니다. 리액트는 다음으로, DOM을 업데이트해서 ``` Clock ```의 렌더링 결과와 매치시킵니다.
+2) 리액트는 다음으로, ``` Clock ``` component의 ``` render() ``` mothod를 호출합니다. 이것이 리액트가 스크린에 무엇을 표시할지 아는 방법입니다. 리액트는 다음으로, DOM을 업데이트해서 ``` Clock ```의 렌더링 결과와 매치시킵니다.
 
-3) ``` Clock ```의 결과가 DOM에 삽입될 때, 리액트는  ``` componentDidMount() ``` lifecycle hook를 호출합니다. 내부에서는 ``` Clock ```component가 매 초마다 ``` tick() ```을 호출하는 timer를 설정하기 위해 브라우저에 요청합니다.
+3) ``` Clock ```의 결과가 DOM에 삽입될 때, 리액트는  ``` componentDidMount() ``` lifecycle hook를 호출합니다. 내부에서는 ``` Clock ``` component가 매 초마다 ``` tick() ```을 호출하는 timer를 설정하기 위해 브라우저에 요청합니다.
 
-4) 브라우저는 매초마다 ``` tick() ```을 호출합니다. 내부에서는 ``` Clock ```component가 현재 시각을 포함한 객체를 가지고 ``` setState() ```를 호출하므로써 UI 업데이트를 예약합니다. ``` setState() ```를 호출한 덕분에 리액트는 state가 변경된것을 알았고 스크린에 무엇을 표시할지 알기위해 다시한번 ``` render() ```를 호출합니다. 이 시간, ``` render() ```method안의 ``` this.state.date ```는 변결될것 입니다. 그리고 렌더링 결과는 업데이트된 시간을 포함할것 입니다. 리액트는 그에따라 DOM을 업데이트 합니다.
+4) 브라우저는 매초마다 ``` tick() ```을 호출합니다. 내부에서는 ``` Clock ``` component가 현재 시각을 포함한 객체를 가지고 ``` setState() ```를 호출하므로써 UI 업데이트를 예약합니다. ``` setState() ```를 호출한 덕분에 리액트는 state가 변경된것을 알았고 스크린에 무엇을 표시할지 알기위해 다시한번 ``` render() ```를 호출합니다. 이 시간, ``` render() ```method안의 ``` this.state.date ```는 변결될것 입니다. 그리고 렌더링 결과는 업데이트된 시간을 포함할것 입니다. 리액트는 그에따라 DOM을 업데이트 합니다.
 
 5) ``` Clock ```component가 DOM에서 제거되면, 리액트는 ``` componentWillUnmount() ``` lifecycle hook를 호출하여 timer을 중지합니다.
 
@@ -378,7 +378,7 @@ function FormattedDate(props) {
 여러분이 component 트리는 props의 폭포(waterfall)로 생각했다면, 각각의 state는 아래로 흐르고 임의의 지점에 합류하는 추가적인 수원지라고 볼 수 있습니다.
 
 모든 component가 실제로 분리되어 있다는 것을 보이기 위해, 3개의 ``` <Clock> ```들을 렌더링하는 ``` App ``component를 만들겠습니다.
-```
+``` 
 function App() {
   return (
     <div>

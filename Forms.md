@@ -207,7 +207,7 @@ class Reservation extends React.Component {
 ```
 <a href="https://codepen.io/gaearon/pen/wgedvV?editors=0010">Try it on CodePen.</a>
 
-주어진 input name과 같은 key의 state를 업데이트 하기위해 ES6의 <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names">computed property name<a/>을 사용한것을 살펴보세요.
+주어진 input name과 같은 key의 state를 업데이트 하기위해 ES6의 <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names">computed property name</a>을 사용한것을 살펴보세요.
 
 ```
 this.setState({
