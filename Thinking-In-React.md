@@ -46,8 +46,7 @@
         - ``` ProductRow ```
 
 ## 2 단계: 리액트로 정적 버전을 빌드해라
-
-<iframe id="cp_embed_vXpAgj" src="//codepen.io/lacker/embed/vXpAgj?height=600&amp;theme-id=0&amp;slug-hash=vXpAgj&amp;default-tab=js&amp;user=lacker&amp;embed-version=2" scrolling="no" frameborder="0" height="600" allowtransparency="true" allowfullscreen="true" name="CodePen Embed" title="CodePen Embed 2" class="cp_embed_iframe " style="width: 100%; overflow: hidden;"></iframe>
+<a href="codepen.io/lacker/embed/vXpAgj?height=600&amp;theme-id=0&amp;slug-hash=vXpAgj&amp;default-tab=js&amp;user=lacker&amp;embed-version=2">Try it on CodePen.</a>
 
 이제, component의 계층구조가 생겼습니다. 이제는 앱은 구현할 차례입니다. 가장 간단한 방법은 data model을 취하지만, 통신은 하지 않는 version을 빌드하는것 입니다. 정적 version을 빌드하는 것은 많은 많이 생각할 필요는 없지만, 많은 타이핑이 필요한 반면, 통신을 하는 version을 빌드하는 것은 많은 생각이 필요지만, 타이핑은 많이 필요하지 않아서, 이 두 version을 분리하는 것이 가장 좋은 방법입니다. 이제 이러한 이유를 살펴보겠습니다.
 
@@ -83,7 +82,8 @@ UI를 인터렉티브하게 만드려면, 기본 data model의 변경을 트리�
   - checkbox의 값
 
 ## 4 단계: State가 어디에 존재해야 하는지 확인해라
-<iframe id="cp_embed_ORzEkG" src="//codepen.io/lacker/embed/ORzEkG?height=600&amp;theme-id=0&amp;slug-hash=ORzEkG&amp;default-tab=js&amp;user=lacker&amp;embed-version=2" scrolling="no" frameborder="0" height="600" allowtransparency="true" allowfullscreen="true" name="CodePen Embed" title="CodePen Embed 1" class="cp_embed_iframe " style="width: 100%; overflow: hidden;"></iframe>
+<a href="codepen.io/lacker/embed/ORzEkG?height=600&amp;theme-id=0&amp;slug-hash=ORzEkG&amp;default-tab=js&amp;user=lacker&amp;embed-version=2">Try it on CodePen.</a>
+
 좋습니다. 이제 최소한의 app state를 알아냈습니다. 다음은 어떤 component가 이 state를 변경하고 소유할지 알아보아야 합니다.
 
 기억하세요: 리액트는 항상 한 방향으로 계층구조를 따라 아래로 흐릅니다. 어떤 component가 어떤 state를 소유해야 하는지, 바로 명확히 보이지 않을 수 있습니다. ** 종종 이는 초심자가 이해하는데 있어서 가장 큰 산 **이므로, 아래의 단계에 따라 알아보겠습니다.
@@ -104,7 +104,7 @@ UI를 인터렉티브하게 만드려면, 기본 data model의 변경을 트리�
   이제 앱이 어떻게 동작할지 볼 수 있습니다. ``` filterText ```응 ``` "ball" ```로 설정하고 앱을 리프레시해보세요. 정상적으로 업데이트된 table이 나올것 입니다.
 
 ## 5 단계: 역방향 data flow 추가하기
-<iframe id="cp_embed_qRqmjd" src="//codepen.io/rohan10/embed/qRqmjd?height=265&amp;theme-id=0&amp;slug-hash=qRqmjd&amp;default-tab=js%2Cresult&amp;user=rohan10&amp;embed-version=2&amp;pen-title=Thinking%20In%20React%3A%20Step%205" scrolling="no" frameborder="0" height="265" allowtransparency="true" allowfullscreen="true" name="CodePen Embed" title="Thinking In React: Step 5" class="cp_embed_iframe " style="width: 100%; overflow: hidden;"></iframe>
+<a href="codepen.io/lacker/embed/ORzEkG?height=600&theme-id=0&slug-hash=ORzEkG&default-tab=js&user=lacker&embed-version=2">Try it on CodePen.</a>
 
 지금까지, 계층구조를 따라 props와 state의 함수처럼 올바르게 렌더링 하는 앱을 만들었습니다. 이제 다른 방식의 데이터 흐름을 지원해 보겠습니다. 계층구조 깊숙한 곳의 form component가 ``` FilterableProductTable ```의 state를 업데이트 해야 합니다.
 
