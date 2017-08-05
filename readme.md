@@ -26,4 +26,6 @@
 
 [14. JSX-In-DEpth](https://github.com/graykick/react-docs-kor/blob/master/14.%20JSX-In-Depth.md)
 
+[15. Typechecking-With-PropTypes](https://github.com/graykick/react-docs-kor/blob/master/15.%20Typechecking-With-PropTypes.md)
+
 원문: <https://facebook.github.io/react/docs/hello-world.html>
